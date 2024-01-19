@@ -13,3 +13,10 @@ li {
   border-radius: 5%;
   border: none;
 }
+
+@media screen and (max-width: 600px) {
+  .emoji {
+    height: 70px;
+    padding: 5%;
+  }
+}

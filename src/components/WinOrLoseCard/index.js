@@ -24,15 +24,18 @@ class WinOrLoseCard extends Component {
     }
     return (
       <div className="win-or-loss-card">
-        <div>
-          <h1>{gameRes}</h1>
-          <p>{encourage}</p>
-          <p>{scores}/12</p>
-          <button type="button" onClick={playAgain}>
+        <div className="play-con">
+          <h1 className="res-head">{gameRes}</h1>
+          <div className="para-con">
+            <p className="res-encourage">{encourage}</p>
+            <p className="para-score">{scores}/12</p>
+          </div>
+
+          <button type="button" onClick={playAgain} className="btn-play">
             Play Again
           </button>
         </div>
-        <div>
+        <div className="win-loss-con">
           <img src={imgUrl} alt="win or lose" className="win-or-loss-img" />
         </div>
       </div>

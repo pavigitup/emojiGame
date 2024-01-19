@@ -11,6 +11,7 @@
   align-items: center;
   position: fixed;
   top: 0px;
+  background-color: #ffffff33;
 }
 
 .emoji-head-con {
@@ -40,4 +41,19 @@
   font-size: 20px;
   font-weight: 500;
   padding: 0% 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    padding: 2% 5%;
+  }
+  .emoji-logo {
+    height: 40px;
+  }
+  .emoji-head {
+    font-size: 15px;
+  }
+  .score-para {
+    font-size: 15px;
+  }
 }

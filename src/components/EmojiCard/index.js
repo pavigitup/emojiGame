@@ -11,7 +11,7 @@ class EmojiCard extends Component {
     return (
       <li key={id}>
         <button type="button" className="button" onClick={selectEmoji}>
-          <img src={emojiUrl} alt={emojiName} />
+          <img src={emojiUrl} alt={emojiName} className="emoji" />
         </button>
       </li>
     )
