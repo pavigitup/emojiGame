@@ -1,0 +1,43 @@
+/* Write your code here. */
+/* Write your code here. */
+* {
+  font-family: roboto;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2% 10%;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+}
+
+.emoji-head-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.emoji-logo {
+  height: 50px;
+}
+
+.emoji-head {
+  color: #fff;
+  font-size: 25px;
+  padding-left: 10px;
+}
+
+.score-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.score-para {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0% 10px;
+}

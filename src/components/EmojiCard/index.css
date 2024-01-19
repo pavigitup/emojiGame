@@ -1,0 +1,15 @@
+li {
+  padding: 3%;
+  border: 2px solid #ffffff30;
+  border-radius: 5%;
+  margin: 2%;
+  background-color: #ffffff33;
+  opacity: 0.9;
+}
+
+.button {
+  padding: 5%;
+  background-color: transparent;
+  border-radius: 5%;
+  border: none;
+}

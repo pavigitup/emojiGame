@@ -1,0 +1,9 @@
+.win-or-loss-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.win-or-loss-img {
+  height: 200px;
+  padding: 10%;
+}
