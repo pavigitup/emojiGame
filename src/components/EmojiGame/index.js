@@ -18,13 +18,25 @@ class EmojiGame extends Component {
     this.startGame = this.startGame.bind(this)
   }
 
+  updateTopScore = () => {
+    const {score, topScore} = this.state
+
+    // Check if the current score is greater than the top score
+    if (score > topScore) {
+      this.setState({
+        topScore: score,
+        score: 0, // Update the top score
+      })
+    }
+  }
+
   shuffledEmojisList = () => {
     const {emojisList} = this.props
-    return emojisList.sort(() => Math.random() - 0.5)
+    return emojisList.slice().sort(() => Math.random() - 0.5)
   }
 
   clickEmoji = id => {
-    const {initialId, gameOver} = this.state
+    const {initialId, gameOver, score} = this.state
 
     if (!gameOver) {
       if (!initialId.includes(id)) {
@@ -32,6 +44,14 @@ class EmojiGame extends Component {
           score: prevState.score + 1,
           initialId: [...prevState.initialId, id],
         }))
+
+        if (score + 1 === 12) {
+          this.setState({
+            gameOver: true,
+            scores: score + 1,
+          })
+        }
+
         this.shuffledEmojisList()
       } else {
         this.setState(
@@ -58,8 +78,8 @@ class EmojiGame extends Component {
   }
 
   render() {
-    const {emojisList} = this.props
     const {score, topScore, gameOver, scores} = this.state
+    const shuffledEmojis = this.shuffledEmojisList()
 
     return (
       <div className="bg-con">
@@ -68,11 +88,12 @@ class EmojiGame extends Component {
           <WinOrLoseCard
             score={score}
             scores={scores}
+            updateTopScore={this.updateTopScore}
             startGame={this.startGame}
           />
         ) : (
           <ul className="emojisCon">
-            {emojisList.map(eachList => (
+            {shuffledEmojis.map(eachList => (
               <EmojiCard
                 key={eachList.id}
                 emojisFace={eachList}

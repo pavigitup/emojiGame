@@ -18,7 +18,7 @@ class NavBar extends Component {
             </div>
             <div className="score-con">
               <p className="score-para">Score: {score}</p>
-              <p className="score-para">Top Score:{topScore}</p>
+              <p className="score-para">Top Score: {topScore}</p>
             </div>
           </div>
         ) : (

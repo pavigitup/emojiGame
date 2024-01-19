@@ -3,10 +3,11 @@ import './index.css'
 
 class WinOrLoseCard extends Component {
   render() {
-    const {scores, startGame} = this.props
+    const {scores, startGame, updateTopScore} = this.props
     console.log(scores)
 
     const playAgain = () => {
+      updateTopScore()
       startGame()
     }
 
